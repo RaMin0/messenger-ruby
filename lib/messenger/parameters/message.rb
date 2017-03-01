@@ -3,7 +3,7 @@ module Messenger
     class Message
       include Callback
 
-      attr_accessor :mid, :seq, :sticker_id, :text, :attachments, :is_echo, :app_id, :metadata
+      attr_accessor :mid, :seq, :sticker_id, :text, :attachments, :quick_reply, :is_echo, :app_id, :metadata
 
       def initialize(mid:, seq:, sticker_id: nil, text: nil, attachments: nil, quick_reply: nil, is_echo: nil, app_id: nil, metadata: nil)
         @mid         = mid
