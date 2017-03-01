@@ -56,8 +56,10 @@ module Messenger
                                             { attachments: [
                                               :type,
                                               :url,
-                                              { coordinates: :lat },
-                                              { coordinates: :long }
+                                              :title,
+                                              payload: { coordinates: [
+                                                :lat, :long
+                                              ] }
                                             ] },
                                             { quick_reply: :payload },
                                             :is_echo,
