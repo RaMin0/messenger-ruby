@@ -79,6 +79,9 @@ module Messenger
                                         ],
                                         account_linking: [
                                           :status, :authorization_code
+                                        ],
+                                        referral: [
+                                          :ref, :source, :type
                                         ]
                                       ]])
       Params.new(safe_params)
