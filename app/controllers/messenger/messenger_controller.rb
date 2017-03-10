@@ -81,7 +81,7 @@ module Messenger
                                           :status, :authorization_code
                                         ],
                                         referral: [
-                                          :ref, :source, :Type
+                                          :ref, :source, :type
                                         ]
                                       ]])
       Params.new(safe_params)
