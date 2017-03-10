@@ -3,12 +3,12 @@ module Messenger
     class Referral
       include Callback
 
-      attr_accessor :ref, :source, :type
+      attr_accessor :ref, :source, :ref_type
 
       def initialize(ref:, source:, type:)
         @ref = ref
         @source = source
-        @type = type
+        @ref_type = type
       end
     end
   end
