@@ -20,6 +20,10 @@ module Messenger
       def postback
         { payload: @value }
       end
+
+      def phone_number
+        { payload: @value }
+      end
     end
   end
 end
