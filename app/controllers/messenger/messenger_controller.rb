@@ -18,10 +18,16 @@ module Messenger
       render json: 'Invalid page access token'
     end
 
+    protected
+
+    def messenger_config
+      Messenger.config
+    end
+
     private
 
     def app_location
-      "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=#{Messenger.config.page_access_token}"
+      "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=#{messenger_config.page_access_token}"
     end
 
     def activate_bot
@@ -35,7 +41,7 @@ module Messenger
     end
 
     def verify_token_valid?
-      params["hub.verify_token"] == Messenger.config.verify_token
+      params["hub.verify_token"] == messenger_config.verify_token
     end
 
     def fb_params

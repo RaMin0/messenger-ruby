@@ -64,7 +64,7 @@ Create `messenger_controller.rb` in your controllers directory - controller has 
 class MessengerController < Messenger::MessengerController
   def webhook
     #logic here
-    render nothing: true, status: 200
+    head :ok 
   end
 end
 ```
@@ -293,7 +293,7 @@ if fb_params.first_entry.callback.message?
 end
 
 #make sure to send 200 at the end
-render nothing: true, status: 200
+head :ok
 ```
 
 #### Image
