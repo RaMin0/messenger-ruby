@@ -24,6 +24,7 @@ require "messenger/params"
 
 require "messenger/components/elements/text"
 require "messenger/components/elements/image"
+require "messenger/components/elements/video"
 require "messenger/components/elements/button"
 require "messenger/components/elements/bubble"
 require "messenger/components/elements/quick_reply"
