@@ -19,9 +19,11 @@ module Messenger
     end
 
     def self.send(data, page_access_token: Messenger.config.page_access_token)
+      data = data.build if data.is_a?(Request)
+
       RestClient.post(
         "https://graph.facebook.com/v2.6/me/messages?access_token=#{page_access_token}",
-        data.build.to_json,
+        data.to_json,
         content_type: :json
       )
     rescue RestClient::ExceptionWithResponse => err
