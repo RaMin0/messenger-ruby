@@ -63,9 +63,11 @@ module Messenger
                                               :type,
                                               :url,
                                               :title,
-                                              payload: { coordinates: [
+                                              payload: [
+                                                :url,
+                                                coordinates: [
                                                 :lat, :long
-                                              ] }
+                                              ] ]
                                             ] },
                                             { quick_reply: :payload },
                                             :is_echo,
