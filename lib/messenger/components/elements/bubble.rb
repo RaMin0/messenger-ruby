@@ -5,7 +5,7 @@ module Messenger
     class Bubble
       include Components::Element
 
-      attr_accessor :title, :item_url, :image_url, :default_action, :buttons
+      attr_accessor :title, :subtitle, :item_url, :image_url, :default_action, :buttons
 
       def initialize(title:, subtitle: nil, item_url: nil, image_url: nil, default_action: nil, buttons: nil)
         @title           = title
